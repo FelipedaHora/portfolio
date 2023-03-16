@@ -20,31 +20,66 @@ body {
     width: 100%;
     margin: auto;
 
-    .intro {
+    .container-nav {
+        width: 100%;
+        height: 60px;
+        background: rgb(75, 8, 199);
+        background: linear-gradient(90deg, rgba(75, 8, 199, 1) 30%, rgba(139, 76, 255, 1) 84%);
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 130px;
+        padding-right: 130px;
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: config.$color-white;
+            padding-right: 40px;
+            font-size: 1rem;
+        }
+
+        .logo{
+            width: 100%;
+            img{
+                width: 7%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+        }
+
+    }
+
+    .intro {
+        
+        display: flex;
+        justify-content:left;
         align-items: center;
         width: 100%;
         height: 100vh;
-        background-color: config.$color-green;
-        color: config.$color-white;
+        background: rgb(75, 8, 199);
+        background: linear-gradient(90deg, rgba(75, 8, 199, 1) 0%, rgba(139, 76, 255, 1) 62%);
 
         .container {
+            padding-left: 180px;
             h1 {
                 font-size: 2rem;
-                text-align: center;
+                text-align: left;
             }
 
             p {
                 font-size: 1rem;
-                text-align: center;
+                text-align: left;
+                color: config.$color-yellow;
             }
 
             .m-auto-btn {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                justify-content: left;
+                align-items: left;
                 width: 100%;
                 margin-top: 8px;
 
@@ -60,6 +95,14 @@ body {
                 }
             }
         }
+        .vector-index{
+            width: 600px;
+            img{
+                width: 100%;
+                padding-left: 60px;
+            }
+        }
+
     }
 }
 
@@ -110,6 +153,7 @@ body {
                         @include config.font-paragrafo;
                         text-align: justify;
                         margin-bottom: 20px;
+                        font-size: 0.4rem;
                     }
 
                     .habilidades {
@@ -586,19 +630,21 @@ body {
             }
         }
     }
-    .webview .contato{
-        .container{
-            .title{
+
+    .webview .contato {
+        .container {
+            .title {
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
-            .formulario{
-                form{
-                    .form-group{
+
+            .formulario {
+                form {
+                    .form-group {
                         display: flex;
                         flex-direction: row;
-                        
-                        .controls{
+
+                        .controls {
                             padding: 5px;
                         }
                     }
@@ -609,26 +655,26 @@ body {
 
 }
 
-@media only screen and (min-width:config.$media-desktop){
-    .webview .intro{
-        .container{
-            h1{
+@media only screen and (min-width:config.$media-desktop) {
+    .webview .intro {
+        .container {
+            h1 {
                 font-size: 3rem;
             }
 
-            p{
+            p {
                 font-size: 1.6rem;
             }
 
-            .m-auto-btn{
+            .m-auto-btn {
                 margin-top: 10px;
-                
-                .btn-portfolio{
+
+                .btn-portfolio {
                     @include config.font-paragrafo;
                     width: 180px;
                     height: 40px;
 
-                    &:hover{
+                    &:hover {
                         background-color: config.$color-green;
                         border-radius: 6px;
                         border: 1px solid config.$color-green;
@@ -638,57 +684,59 @@ body {
         }
     }
 
-    .webview .sobre{
-        .container{
-            width:90%;
+    .webview .sobre {
+        .container {
+            width: 90%;
             margin: auto;
 
-            .title{
+            .title {
                 margin-top: 40px;
                 margin-bottom: 40px;
 
-                h2{
+                h2 {
                     font-size: 2rem;
                 }
             }
 
-            .row{
+            .row {
                 display: grid;
                 grid-template-columns: 40% 60%;
                 margin-bottom: 40px;
 
-                .c-photo{
+                .c-photo {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     padding: 10px;
 
-                    img{
+                    img {
                         width: 100%;
                         max-width: 400px;
                     }
                 }
-                
-                .c-descricao{
+
+                .c-descricao {
                     padding: 10px;
                     margin-top: 0px;
 
-                    p{
+                    p {
                         font-size: 1.2rem;
                         margin-bottom: 25px;
                     }
 
-                    .habilidades{
-                        .h-item{
-                            .h-title{
+                    .habilidades {
+                        .h-item {
+                            .h-title {
                                 width: 100%;
 
-                                h3{font-size: 1.2rem;}
+                                h3 {
+                                    font-size: 1.2rem;
+                                }
                             }
 
-                            .h-c-porcentagem{
-                                .h-porcentagem-geral{
-                                    span{
+                            .h-c-porcentagem {
+                                .h-porcentagem-geral {
+                                    span {
                                         font-size: 1.2rem;
                                     }
                                 }
@@ -700,22 +748,22 @@ body {
         }
     }
 
-    .webview .servicos{
+    .webview .servicos {
 
-        .container{
+        .container {
             width: 90%;
             margin: auto;
 
-            .s-title{
+            .s-title {
                 margin-top: 40px;
                 margin-bottom: 40px;
 
-                h2{
+                h2 {
                     font-size: 2rem;
                 }
             }
 
-            .s-carrousel{
+            .s-carrousel {
                 width: 96%;
                 margin: auto;
                 margin-bottom: 40px;
@@ -723,36 +771,37 @@ body {
         }
     }
 
-    .webview .portfolios{
+    .webview .portfolios {
         min-height: auto;
-        .container{
+
+        .container {
             width: 90%;
             margin: auto;
 
-            .p-title{
-                h2{
+            .p-title {
+                h2 {
                     font-size: 2rem;
                 }
             }
 
-            .p-projetos{
+            .p-projetos {
                 padding: 10px;
 
-                .projeto{
-                    grid-template-columns: repeat(3,auto);
+                .projeto {
+                    grid-template-columns: repeat(3, auto);
                     grid-template-rows: 1fr;
                     grid-auto-rows: 1fr;
                     row-gap: 10px;
                     column-gap: 10px;
 
-                    .photos{
+                    .photos {
                         height: 100%;
 
-                        .img{
+                        .img {
                             position: relative;
 
-                            &:hover{
-                                .descricao{
+                            &:hover {
+                                .descricao {
                                     position: absolute;
                                     display: flex;
                                     width: 100%;
@@ -762,7 +811,7 @@ body {
                                     left: 0;
                                     z-index: 9999;
 
-                                    p{
+                                    p {
                                         display: block;
                                         color: config.$color-white;
                                     }
@@ -775,30 +824,30 @@ body {
         }
     }
 
-    .webview .contato{
+    .webview .contato {
         margin-bottom: 50px;
 
-        .container{
+        .container {
             width: 90%;
             margin: auto;
 
-            .title{
+            .title {
                 margin-top: 30px;
                 margin-bottom: 30px;
 
-                h2{
+                h2 {
                     font-size: 2rem;
                 }
             }
 
-            .formulario{
-                form{
-                    .form-group{
+            .formulario {
+                form {
+                    .form-group {
                         display: flex;
                         flex-direction: row;
                         margin-bottom: 10px;
-                        
-                        .controls{
+
+                        .controls {
                             padding: 5px;
                         }
                     }
